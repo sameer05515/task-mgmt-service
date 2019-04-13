@@ -17,6 +17,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Task {
     @Id
     String id;
+    String title;
+    String environment;
     String taskDescription;
     String frequency;
     String activityType;
@@ -32,13 +34,16 @@ public class Task {
     String nextOccurance;
     String highestPoint;
     String pointsEarnedToday;
-    String why;
-    String how;
+   
+    String whatIfNotDoing;
+    int rating=1;
 
     public Task() {
     }
 
 	/**
+	 * @param title
+	 * @param environment
 	 * @param taskDescription
 	 * @param frequency
 	 * @param activityType
@@ -56,12 +61,15 @@ public class Task {
 	 * @param pointsEarnedToday
 	 * @param why
 	 * @param how
+	 * @param whatIfNotDoing
 	 */
-	public Task(String taskDescription, String frequency, String activityType, String box, String sequence,
+	public Task(String title,String environment,String taskDescription, String frequency, String activityType, String box, String sequence,
 			String remarks, String routineScheduleDescription, String status, String scheduleDate, String endDate,
 			String performedBy, String taskPriorityGroup, String nextOccurance, String highestPoint,
-			String pointsEarnedToday, String why, String how) {
+			String pointsEarnedToday,String whatIfNotDoing,int rating) {
 		super();
+		this.title=title;
+		this.environment=environment;
 		this.taskDescription = taskDescription;
 		this.frequency = frequency;
 		this.activityType = activityType;
@@ -77,8 +85,9 @@ public class Task {
 		this.nextOccurance = nextOccurance;
 		this.highestPoint = highestPoint;
 		this.pointsEarnedToday = pointsEarnedToday;
-		this.why = why;
-		this.how = how;
+		
+		this.whatIfNotDoing=whatIfNotDoing;
+		this.rating=rating;
 	}
 
 	public String getId() {
@@ -209,19 +218,37 @@ public class Task {
 		this.pointsEarnedToday = pointsEarnedToday;
 	}
 
-	public String getWhy() {
-		return why;
+	
+
+	public String getWhatIfNotDoing() {
+		return whatIfNotDoing;
 	}
 
-	public void setWhy(String why) {
-		this.why = why;
+	public void setWhatIfNotDoing(String whatIfNotDoing) {
+		this.whatIfNotDoing = whatIfNotDoing;
 	}
 
-	public String getHow() {
-		return how;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setHow(String how) {
-		this.how = how;
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public int getRating() {
+		return rating;
+	}
+
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
+
+	public String getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(String environment) {
+		this.environment = environment;
 	}
 }

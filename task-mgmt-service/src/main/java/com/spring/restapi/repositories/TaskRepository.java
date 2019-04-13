@@ -6,13 +6,15 @@
 package com.spring.restapi.repositories;
 
 import com.spring.restapi.models.Task;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author didin
  */
-public interface TaskRepository extends CrudRepository<Task, String> {
+public interface TaskRepository extends CrudRepository<Task, String>,MongoRepository<Task, String> {
     @Override
     Task findOne(String id);
 

@@ -53,7 +53,7 @@ public class TaskController {
 //            prod.setProdPrice(product.getProdPrice());
 //        if(product.getProdImage() != null)
 //            prod.setProdImage(product.getProdImage());
-        taskRepository.save(prod);
+        taskRepository.save(product);
         return prod;
     }
     
