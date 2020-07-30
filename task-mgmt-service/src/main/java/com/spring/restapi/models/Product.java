@@ -5,15 +5,22 @@
  */
 package com.spring.restapi.models;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import javax.persistence.Entity;
+
+//import org.springframework.data.annotation.Id;
+//import org.springframework.data.mongodb.core.mapping.Document;
+
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  * @author didin
  */
 
-@Document(collection = "products")
+//@Document(collection = "products")
+@Entity
+@Table(name = "t_products")
 public class Product {
     @Id
     String id;

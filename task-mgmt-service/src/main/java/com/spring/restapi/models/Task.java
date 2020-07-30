@@ -5,37 +5,86 @@
  */
 package com.spring.restapi.models;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
+//import org.springframework.data.annotation.Id;
+import javax.persistence.Id;
 /**
  *
  * @author didin
  */
 
-@Document(collection = "tasks")
+//@Document(collection = "tasks")
+@Entity
+@Table(name = "t_task")
 public class Task {
     @Id
+    @GenericGenerator(name = "sequence_task_id", strategy = "com.spring.restapi.sequence.TaskIdGenerator")
+    @GeneratedValue(generator = "sequence_task_id")
     String id;
+    
+    @Column(name="title", columnDefinition="TEXT")
     String title;
+    
+    @Column(name="environment", columnDefinition="TEXT")
     String environment;
+    
+    @Column(name="taskDescription", columnDefinition="TEXT")
     String taskDescription;
+    
+    @Column(name="frequency", columnDefinition="TEXT")
     String frequency;
+    
+    @Column(name="activityType", columnDefinition="TEXT")
     String activityType;
+    
+    @Column(name="box", columnDefinition="TEXT")
     String box;
+    
+    @Column(name="sequence", columnDefinition="TEXT")
     String sequence;
+    
+    @Column(name="remarks", columnDefinition="TEXT")
     String remarks;
+    
+    @Column(name="routineScheduleDescription", columnDefinition="TEXT")
     String routineScheduleDescription;
+    
+    @Column(name="status", columnDefinition="TEXT")
     String status;
-    String scheduleDate;
-    String endDate;
+    
+    @Column(name="scheduleDate")
+    Date scheduleDate;
+    
+    @Column(name="endDate")
+    Date endDate;
+    
+    @Column(name="performedBy", columnDefinition="TEXT")
     String performedBy;
+    
+    @Column(name="taskPriorityGroup", columnDefinition="TEXT")
     String taskPriorityGroup;
-    String nextOccurance;
-    String highestPoint;
-    String pointsEarnedToday;
+    
+    @Column(name="nextOccurance")
+    Date nextOccurance;
+    
+    @Column(name="highestPoint")
+    int highestPoint;
+    
+    @Column(name="pointsEarnedToday")
+    int pointsEarnedToday;
    
+    @Column(name="whatIfNotDoing", columnDefinition="TEXT")
     String whatIfNotDoing;
+    
+    @Column(name="rating")
     int rating=1;
 
     public Task() {
@@ -64,9 +113,9 @@ public class Task {
 	 * @param whatIfNotDoing
 	 */
 	public Task(String title,String environment,String taskDescription, String frequency, String activityType, String box, String sequence,
-			String remarks, String routineScheduleDescription, String status, String scheduleDate, String endDate,
-			String performedBy, String taskPriorityGroup, String nextOccurance, String highestPoint,
-			String pointsEarnedToday,String whatIfNotDoing,int rating) {
+			String remarks, String routineScheduleDescription, String status, Date scheduleDate, Date endDate,
+			String performedBy, String taskPriorityGroup, Date nextOccurance, int highestPoint,
+			int pointsEarnedToday,String whatIfNotDoing,int rating) {
 		super();
 		this.title=title;
 		this.environment=environment;
@@ -162,19 +211,19 @@ public class Task {
 		this.status = status;
 	}
 
-	public String getScheduleDate() {
+	public Date getScheduleDate() {
 		return scheduleDate;
 	}
 
-	public void setScheduleDate(String scheduleDate) {
+	public void setScheduleDate(Date scheduleDate) {
 		this.scheduleDate = scheduleDate;
 	}
 
-	public String getEndDate() {
+	public Date getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(String endDate) {
+	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
 
@@ -194,27 +243,27 @@ public class Task {
 		this.taskPriorityGroup = taskPriorityGroup;
 	}
 
-	public String getNextOccurance() {
+	public Date getNextOccurance() {
 		return nextOccurance;
 	}
 
-	public void setNextOccurance(String nextOccurance) {
+	public void setNextOccurance(Date nextOccurance) {
 		this.nextOccurance = nextOccurance;
 	}
 
-	public String getHighestPoint() {
+	public int getHighestPoint() {
 		return highestPoint;
 	}
 
-	public void setHighestPoint(String highestPoint) {
+	public void setHighestPoint(int highestPoint) {
 		this.highestPoint = highestPoint;
 	}
 
-	public String getPointsEarnedToday() {
+	public int getPointsEarnedToday() {
 		return pointsEarnedToday;
 	}
 
-	public void setPointsEarnedToday(String pointsEarnedToday) {
+	public void setPointsEarnedToday(int pointsEarnedToday) {
 		this.pointsEarnedToday = pointsEarnedToday;
 	}
 
