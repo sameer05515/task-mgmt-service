@@ -1,0 +1,18 @@
+[
+	{
+		"id": "morning",
+		"name": "morning"
+	},
+	{
+		"id": "day",
+		"name": "day"
+	},
+	{
+		"id": "evening",
+		"name": "evening"
+	},
+	{
+		"id": "night",
+		"name": "night"
+	}
+]

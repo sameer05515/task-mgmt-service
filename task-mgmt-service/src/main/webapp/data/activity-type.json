@@ -1,0 +1,18 @@
+[
+	{
+		"id": "study",
+		"name": "study"
+	},
+	{
+		"id": "exercise",
+		"name": "exercise"
+	},
+	{
+		"id": "home-works",
+		"name": "home-works"
+	},
+	{
+		"id": "office-works",
+		"name": "office-works"
+	}
+]

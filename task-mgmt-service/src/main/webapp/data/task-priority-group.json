@@ -1,0 +1,18 @@
+[
+	{
+		"id": "urgent",
+		"name": "urgent"
+	},
+	{
+		"id": "normal",
+		"name": "normal"
+	},
+	{
+		"id": "not-urgent",
+		"name": "not-urgent"
+	},
+	{
+		"id": "useless",
+		"name": "useless"
+	}
+]

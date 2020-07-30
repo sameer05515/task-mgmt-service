@@ -1,0 +1,42 @@
+[
+	{
+		"id": "daily",
+		"name": "daily"
+	},
+	{
+		"id": "every-2-day",
+		"name": "every-2-day"
+	},
+	{
+		"id": "every-3-day",
+		"name": "every-3-day"
+	},
+	{
+		"id": "weekly",
+		"name": "weekly"
+	},
+	{
+		"id": "bi-weekly",
+		"name": "bi-weekly"
+	},
+	{
+		"id": "monthly",
+		"name": "monthly"
+	},
+	{
+		"id": "bi-monthly",
+		"name": "bi-monthly"
+	},
+	{
+		"id": "tri-monthly",
+		"name": "tri-monthly"
+	},
+	{
+		"id": "half-yearly",
+		"name": "half-yearly"
+	},
+	{
+		"id": "yearly",
+		"name": "yearly"
+	}
+]

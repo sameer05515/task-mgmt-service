@@ -1,4 +1,18 @@
 [
-{"id":"office","name":"office"},
-{"id":"home","name":"home"}
+	{
+		"id": "office",
+		"name": "office"
+	},
+	{
+		"id": "home",
+		"name": "home"
+	},
+	{
+		"id": "self",
+		"name": "self"
+	},
+	{
+		"id": "neighbour",
+		"name": "neighbour"
+	}
 ]

@@ -1,0 +1,18 @@
+[
+	{
+		"id": "open",
+		"name": "office"
+	},
+	{
+		"id": "in-progress",
+		"name": "in-progress"
+	},
+	{
+		"id": "on-hold",
+		"name": "on-hold"
+	},
+	{
+		"id": "closed",
+		"name": "closed"
+	}
+]
