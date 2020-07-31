@@ -44,16 +44,23 @@ public class TaskController {
     
     @RequestMapping(method=RequestMethod.PUT, value="/tasks/{id}")
     public Task update(@PathVariable String id, @RequestBody Task product) {
-    	Task prod = taskRepository.findOne(id);
-//        if(product.getActivityType() != null)
-//            prod.setActivityType(product.getActivityType());
-//        if(product.getProdDesc() != null)
-//            prod.setProdDesc(product.getProdDesc());
-//        if(product.getProdPrice() != null)
-//            prod.setProdPrice(product.getProdPrice());
-//        if(product.getProdImage() != null)
-//            prod.setProdImage(product.getProdImage());
-        taskRepository.save(product);
+    	Task prod =null;
+    	try {
+    		prod=taskRepository.findOne(id);
+//          if(product.getActivityType() != null)
+//              prod.setActivityType(product.getActivityType());
+//          if(product.getProdDesc() != null)
+//              prod.setProdDesc(product.getProdDesc());
+//          if(product.getProdPrice() != null)
+//              prod.setProdPrice(product.getProdPrice());
+//          if(product.getProdImage() != null)
+//              prod.setProdImage(product.getProdImage());
+          taskRepository.save(product);
+    	}catch(Throwable th) {
+    		System.out.println("Some Error occured during update");
+    		th.printStackTrace();
+    		throw th;
+    	}
         return prod;
     }
     
