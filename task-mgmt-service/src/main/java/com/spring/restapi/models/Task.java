@@ -300,4 +300,15 @@ public class Task {
 	public void setEnvironment(String environment) {
 		this.environment = environment;
 	}
+
+	@Override
+	public String toString() {
+		return "Task [id=" + id + ", title=" + title + ", environment=" + environment + ", taskDescription="
+				+ taskDescription + ", frequency=" + frequency + ", activityType=" + activityType + ", box=" + box
+				+ ", sequence=" + sequence + ", remarks=" + remarks + ", routineScheduleDescription="
+				+ routineScheduleDescription + ", status=" + status + ", scheduleDate=" + scheduleDate + ", endDate="
+				+ endDate + ", performedBy=" + performedBy + ", taskPriorityGroup=" + taskPriorityGroup
+				+ ", nextOccurance=" + nextOccurance + ", highestPoint=" + highestPoint + ", pointsEarnedToday="
+				+ pointsEarnedToday + ", whatIfNotDoing=" + whatIfNotDoing + ", rating=" + rating + "]";
+	}
 }

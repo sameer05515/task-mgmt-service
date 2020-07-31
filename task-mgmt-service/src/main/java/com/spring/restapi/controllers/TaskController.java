@@ -46,7 +46,8 @@ public class TaskController {
     public Task update(@PathVariable String id, @RequestBody Task product) {
     	Task prod =null;
     	try {
-    		prod=taskRepository.findOne(id);
+    		
+    		System.out.println(product);
 //          if(product.getActivityType() != null)
 //              prod.setActivityType(product.getActivityType());
 //          if(product.getProdDesc() != null)
@@ -56,6 +57,7 @@ public class TaskController {
 //          if(product.getProdImage() != null)
 //              prod.setProdImage(product.getProdImage());
           taskRepository.save(product);
+          prod=taskRepository.findOne(id);
     	}catch(Throwable th) {
     		System.out.println("Some Error occured during update");
     		th.printStackTrace();
