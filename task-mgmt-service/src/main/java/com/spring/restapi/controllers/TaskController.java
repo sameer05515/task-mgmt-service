@@ -35,8 +35,32 @@ public class TaskController {
 	private static final Logger log = LoggerFactory.getLogger(TaskController.class);
 
 	@RequestMapping(method = RequestMethod.GET, value = "/tasks")
-	public Iterable<Task> product() {
-		return taskRepository.findAll();
+	public ResponseEntity<Object> product() {
+		
+		
+		ResponseEntity<Object> response = null;
+		try {
+			log.info("Inside com.spring.restapi.controllers.TaskController.get(String) method ...");
+
+			System.out.println("Fetching all Tasks ");
+
+			Iterable<Task> retObj = taskRepository.findAll();
+
+			response = ResponseHandler.generateResponse(HttpStatus.OK, false, "Success", retObj);
+
+		} catch (Exception e) {
+			/*
+			 * if (e instanceof InvalidInputSuppliedException) { response =
+			 * ResponseHandler.generateResponse(HttpStatus.BAD_REQUEST, true,
+			 * ((InvalidInputSuppliedException) e).getCustomMessage(),
+			 * "File Created : null"); }
+			 */ /* else { */
+			response = ResponseHandler.generateResponse(HttpStatus.INTERNAL_SERVER_ERROR, true, e.getMessage(),
+					"Exception in getting Task object");
+			/* } */
+			e.printStackTrace();
+		}
+		return response;
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "/tasks")
