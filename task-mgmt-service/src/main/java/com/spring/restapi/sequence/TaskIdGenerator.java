@@ -3,11 +3,12 @@ import java.io.Serializable;
 import java.sql.*;
 import org.hibernate.HibernateException;
 import org.hibernate.engine.spi.SessionImplementor;
+import org.hibernate.engine.spi.SharedSessionContractImplementor;
 import org.hibernate.id.IdentifierGenerator;
 
 public class TaskIdGenerator implements IdentifierGenerator{
 
-    @Override
+//    @Override
     public Serializable generate(SessionImplementor session, Object object)
             throws HibernateException {
 
@@ -36,5 +37,11 @@ public class TaskIdGenerator implements IdentifierGenerator{
 
         return generatedId;
     }
+
+	@Override
+	public Serializable generate(SharedSessionContractImplementor session, Object object) throws HibernateException {
+		// TODO Auto-generated method stub
+		return generate(null, null);
+	}
 
 }

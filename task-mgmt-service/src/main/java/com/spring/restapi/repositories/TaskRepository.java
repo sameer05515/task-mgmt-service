@@ -15,8 +15,7 @@ import com.spring.restapi.models.Task;
  * @author didin
  */
 public interface TaskRepository extends CrudRepository<Task, String>,JpaRepository<Task, String> {
-    @Override
-    Task findOne(String id);
+    //Task findOne(String id);
 
     @Override
     void delete(Task deleted);
