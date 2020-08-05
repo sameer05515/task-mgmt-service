@@ -4,6 +4,10 @@
 		"name": "study"
 	},
 	{
+		"id": "study-create-projects",
+		"name": "study-create-projects"
+	},
+	{
 		"id": "exercise",
 		"name": "exercise"
 	},

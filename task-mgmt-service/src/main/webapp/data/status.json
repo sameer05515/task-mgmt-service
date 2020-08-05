@@ -14,5 +14,29 @@
 	{
 		"id": "closed",
 		"name": "closed"
+	},
+	{
+		"id": "development-analysis",
+		"name": "development-analysis"
+	},
+	{
+		"id": "development-coding-start-post-signoff",
+		"name": "development-coding-start-post-signoff"
+	},
+	{
+		"id": "development-coding",
+		"name": "development-coding"
+	},
+	{
+		"id": "development-testing",
+		"name": "development-testing"
+	},
+	{
+		"id": "development-deployment",
+		"name": "development-deployment"
+	},
+	{
+		"id": "development-bug-report",
+		"name": "development-bug-report"
 	}
 ]

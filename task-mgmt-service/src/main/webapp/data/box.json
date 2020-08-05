@@ -8,6 +8,10 @@
 		"name": "day"
 	},
 	{
+		"id": "afternoon",
+		"name": "afternoon"
+	},
+	{
 		"id": "evening",
 		"name": "evening"
 	},

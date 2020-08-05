@@ -12,6 +12,14 @@
 		"name": "self"
 	},
 	{
+		"id": "self-study",
+		"name": "self-study"
+	},
+	{
+		"id": "self-improvement",
+		"name": "self-improvement"
+	},
+	{
 		"id": "neighbour",
 		"name": "neighbour"
 	}
